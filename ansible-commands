@@ -1,0 +1,4 @@
+ansible webservers --list -hosts
+ansible all --list -hosts
+ansible webservers[-1] --list -hosts
+
