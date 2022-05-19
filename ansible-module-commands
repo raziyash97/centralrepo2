@@ -1,0 +1,4 @@
+ansible all -m command -a "hostname -i"
+ansible all -m command -a "ip a"
+ansible all -m yum -a "name=httpd" -b
+ansible all -m sercice -a "name=httpd status=stopped" -b
