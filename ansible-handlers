@@ -1,0 +1,15 @@
+---
+- name: installing httpd using handlers
+  hosts: all
+  become: true
+  tasks:
+  - name: installing yum
+    yum:
+     name: httpd
+     state: present
+    notify: start the service
+   handlers:
+   - name: start the service
+     service:
+      name: httpd
+      state: started
