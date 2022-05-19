@@ -1,0 +1,9 @@
+---
+- name: copying a file
+  hosts: all
+  become: true
+  tasks:
+  - name: copy using copy module
+    copy:
+     src: /tmp/saifile
+     dest: /root/
